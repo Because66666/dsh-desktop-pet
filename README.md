@@ -1,6 +1,6 @@
 # dsh-desktop-pet
 
-[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）的桌面宠物联动插件：把 agent 的生命周期节点（思考中 / 输出中 / 空闲）实时推送给本地桌宠的 HTTP API（默认适配 BluePet，`http://127.0.0.1:9999`）。
+[DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）的桌面宠物联动插件：把 agent 的生命周期节点（思考中 / 输出中 / 空闲）实时推送给本地桌宠的 HTTP API（默认适配 BluePet，`http://127.0.0.1:9999`,可在[blue-pet](https://blue-pet.cn/)下载程序）。
 
 English documentation follows the Chinese section below.
 
@@ -71,7 +71,7 @@ dsh plugin --profile web remove @deepseek-ai/dsh-desktop-pet
 
 # dsh-desktop-pet (English)
 
-A desktop-pet integration plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh): forwards agent lifecycle moments (thinking / typing / idle) to a local desktop pet's HTTP API (BluePet-compatible, `http://127.0.0.1:9999` by default).
+A desktop-pet integration plugin for [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh): forwards agent lifecycle moments (thinking / typing / idle) to a local desktop pet's HTTP API (BluePet-compatible, `http://127.0.0.1:9999` by default, downloaded it by [blue-pet](https://blue-pet.cn/)).
 
 ## Package
 
