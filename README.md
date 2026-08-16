@@ -19,7 +19,7 @@ English documentation follows the Chinese section below.
 ## 安装
 
 ```sh
-git clone https://github.com/BeCode666/dsh-desktop-pet.git
+git clone https://github.com/Because66666/dsh-desktop-pet.git
 cd dsh-desktop-pet
 
 # 让 dsh 能解析到两个包（file: 为拷贝安装，更新本仓库后需重新执行）
@@ -111,7 +111,7 @@ Desktop-pet integration plugins for [DeepSeek Harness](https://github.com/deepse
 ## Install
 
 ```sh
-git clone https://github.com/BeCode666/dsh-desktop-pet.git
+git clone https://github.com/Because66666/dsh-desktop-pet.git
 cd dsh-desktop-pet
 
 # Make the packages resolvable (file: copies; re-run after pulling updates)

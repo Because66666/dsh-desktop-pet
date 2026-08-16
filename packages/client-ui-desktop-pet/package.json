@@ -4,7 +4,7 @@
   "version": "0.1.0-rc.5",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BeCode666/dsh-desktop-pet.git",
+    "url": "git+https://github.com/Because66666/dsh-desktop-pet.git",
     "directory": "packages/client-ui-desktop-pet"
   },
   "type": "module",
