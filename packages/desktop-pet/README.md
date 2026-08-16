@@ -66,12 +66,6 @@ curl http://127.0.0.1:9999/api/status
 curl -X POST http://127.0.0.1:9999/api/play/startwork
 ```
 
-## Web-GUI background image
-
-Besides notifying the pet, the plugin serves the bundled `assets/hero_internet_globe_final.png` at the exact route `/desktop-pet/background.png` whenever a `webServer` service is composed (the web profile; headless has no HTTP surface and never serves it). The route is immutable (`cache-control: public, max-age=86400`, `content-type: image/png`) and unwinds with the plugin.
-
-The client half [`dsh-client-ui-desktop-pet`](../../client/ui-desktop-pet/README.md) renders the image as the web GUI's frame-wide background at 50% opacity. Both rows must be mounted for the background to appear — the route here, the layer there.
-
 ## Failure handling
 
 Every notification is fire-and-forget: a failed request (connection refused, non-2xx response, or timeout) logs a warning through `ctx.logger` and never propagates into the agent or session loop. The FIFO chain survives a failure, so a later notification still reaches the pet. There is no retry and no replay: a missed notification is dropped, not re-derived from the durable log.

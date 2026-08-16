@@ -11,10 +11,6 @@ import z from '@deepseek-ai/schemastery'
 import type { Session } from '@deepseek-ai/dsh-session'
 // Type-only: loads the dsh-agent `agent/status` Context event declaration.
 import type {} from '@deepseek-ai/dsh-agent'
-// Type-only: loads the dsh-host-webserver `webServer` Context declaration for
-// the optional background-image route.
-import type {} from '@deepseek-ai/dsh-host-webserver'
-import { registerBackgroundRoute } from './background.ts'
 
 /** Cordis function-plugin name. */
 export const name = 'desktop-pet'
@@ -104,7 +100,6 @@ export function playUrl(endpoint: string, action: string): string {
  */
 export function apply(ctx: Context, config: Config): void {
   resolveEndpoint(config.endpoint)
-  registerBackgroundRoute(ctx)
   // Defaults resolve explicitly at the boundary: the Loader schema already
   // applies them, but direct `apply` calls bypass validation.
   const endpoint = config.endpoint

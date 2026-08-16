@@ -66,12 +66,6 @@ curl http://127.0.0.1:9999/api/status
 curl -X POST http://127.0.0.1:9999/api/play/startwork
 ```
 
-## Web GUI 背景图片
-
-除了通知桌宠，插件还在存在 `webServer` 服务（web profile；headless 无 HTTP 面，从不提供）时，于确切路由 `/desktop-pet/background.png` 提供包内 `assets/hero_internet_globe_final.png`。该路由不可变（`cache-control: public, max-age=86400`、`content-type: image/png`），并随插件一起卸载。
-
-客户端半部 [`dsh-client-ui-desktop-pet`](../../client/ui-desktop-pet/README.md) 将该图片渲染为 Web GUI 的框架级背景，透明度 50%。背景要显示，两行都必须挂载——此处的路由，彼处的图层。
-
 ## 失败处理
 
 每条通知都是 fire-and-forget：失败的请求（连接被拒、非 2xx 响应或超时）通过 `ctx.logger` 记录警告，绝不会传播回 agent 或会话循环。FIFO 链在失败后继续存活，后续通知仍能到达桌宠。没有重试、没有重放：错过的通知直接丢弃，不会从持久化日志重新推导。
