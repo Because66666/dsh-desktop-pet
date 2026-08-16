@@ -1,0 +1,45 @@
+{
+  "name": "@deepseek-ai/dsh-client-ui-desktop-pet",
+  "description": "Web GUI background layer for the desktop-pet integration: the bundled globe image at 50% opacity",
+  "version": "0.1.0-rc.5",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeCode666/dsh-desktop-pet.git",
+    "directory": "packages/client-ui-desktop-pet"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./invariant": {
+      "types": "./lib/types/invariant.d.ts",
+      "default": "./lib/invariant.js"
+    },
+    "./client": {
+      "types": "./lib/types/client/index.d.ts",
+      "default": "./lib/client.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-layout"
+      ],
+      "platform": "web"
+    }
+  },
+  "files": [
+    "lib/index.js",
+    "lib/invariant.js",
+    "lib/client.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT"
+}

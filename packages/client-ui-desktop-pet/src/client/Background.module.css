@@ -1,0 +1,15 @@
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  /* The layer sits above the app surfaces (the overlay seat's contract), so a
+     plain 50% opacity would wash the text out with the image. Multiply blends
+     the (light) image into the surfaces instead: dark text pixels stay dark
+     and only the light surface areas pick up the picture. Dark themes show
+     little of the image — multiply against dark surfaces stays dark. */
+  mix-blend-mode: multiply;
+}
